@@ -1,6 +1,7 @@
-Feature: Gestión de cuenta de usuario
-Scenario: El usuario intenta acceder a los ajustes de su perfil para configurar su información
-Given que se haya registrado e ingresado a su cuenta correctamente
-And esté en la sección de "Ajuste de su perfil"
-When acceda a esa pestaña y modifique o agregue nueva información a su perfil
-Then se podrá guardar y establecer los datos registrados
+Feature: Sección de producto Akira en la landing page
+
+  Scenario: Sección destacada sobre el producto Akira
+    Given que soy un usuario interesado en el producto Akira de Lambders
+    Cuando visito la landing page de Lambders
+    Entonces espero encontrar una sección destacada que presente de manera atractiva y concisa el producto Akira
+    Y encuentro imágenes o gráficos que ilustren visualmente a Akira
