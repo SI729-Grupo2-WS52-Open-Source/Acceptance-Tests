@@ -1,7 +1,7 @@
-Feature: Solicitar pedido al por mayor
+Feature: Visualizar historial de compras y pedidos
 
-  Scenario: Descuento por mayor
-    Given que el vendedor está en la ventana del carrito
-    And el vendedor ha elegido los productos que quiere comprar
-    When el vendedor elija la cantidad a comprar de cada producto
-    Then el sistema aplicará de forma automática un descuento por compras al por mayor, si la cantidad solicitada excede un valor establecido individualmente por cada producto
+  Scenario: Visualizando historial de compras y pedidos
+    Given que soy un usuario con sesión iniciada en la aplicación
+    Cuando navego hacia la sección de historial de compras o pedidos en mi perfil
+    Entonces debería ver una lista de mis pedidos pendientes
+    Y para cada pedido, debería poder ver información relevante como el número de pedido, estado del pedido, detalles de los productos comprados, etc.
