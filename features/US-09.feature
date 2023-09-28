@@ -1,20 +1,15 @@
-Feature: Métodos de pago
+Feature: Interfaz intuitiva y fácil de navegar
 
-Scenario: Seleccionar otro método de pago
-Given que soy un usuario en la página de pago
-When elijo la opción de "Otro método de pago" de la lista
-And se me solicita ingresar los detalles del nuevo método
-And proporcionó los detalles válidos del nuevo método de pago
-Then debería recibir una confirmación de que mi método de pago ha sido añadido exitosamente
+  Scenario: Interfaz intuitiva y fácil de utilizar
+    Given que soy un usuario nuevo en el sitio web de Akira
+    Cuando ingreso a la página de inicio
+    Entonces puedo ver de manera clara y concisa los productos que ofrecen
+    Y encuentro secciones o pestañas distribuidas para cada categoría de productos
+    Y puedo comprender rápidamente la navegación y la disposición de los elementos en la interfaz
 
-Scenario: Realizar una compra exitosa con el nuevo método de pago
-Given que soy un usuario con un método de pago adicional registrado
-When selecciono productos, procedo a la página de pago
-And elijo el nuevo método
-And completo el proceso de pago con éxito
-Then debería recibir una confirmación de mi compra y el método de pago utilizado
-
-Scenario: Validación de detalles incorrectos del nuevo método de pago
-Given que soy un usuario en la página de pago y elijo el nuevo método
-When ingrese detalles incorrectos o inválidos del nuevo método de pago
-Then debería recibir un mensaje de error que indique la necesidad de proporcionar detalles válidos
+  Scenario: Información detallada y accesible
+    Given que soy un usuario en el sitio web de Akira
+    Cuando navego por las diferentes secciones de la interfaz
+    Entonces encuentro información detallada sobre los productos
+    Y puedo visualizar descripciones claras y concisas de cada producto
+    Y puedo ver imágenes que ilustran los productos de manera visualmente atractiva
