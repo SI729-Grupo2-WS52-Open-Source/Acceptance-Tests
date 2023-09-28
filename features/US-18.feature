@@ -1,13 +1,8 @@
-Feature: Cambio de cantidad de productos en el carrito
+Feature: Eliminar permanentemente la cuenta
 
-  Scenario: Aumento de la cantidad de unidades del producto a cambiar
-    Given que el comprador está en la página de uno de los productos que le interesó
-    And el comprador ha añadido el producto al carrito
-    When el comprador de click en el botón “+”
-    Then el sistema aumentará la cantidad del artículo a comprar en una unidad y actualizará el texto que muestra la cantidad de artículos de ese producto a comprar
-
-  Scenario: Disminución de la cantidad de unidades del producto a cambiar
-    Given que el comprador está en la página de uno de los productos que le interesó
-    And el comprador ha añadido el producto al carrito
-    When el comprador de clic en el botón “-”
-    Then el sistema reducirá la cantidad del artículo a comprar en una unidad y actualizará el texto que muestra la cantidad de artículos de ese producto a comprar
+  Scenario: Eliminar permanentemente la cuenta
+    Given que soy un usuario autenticado en Akira
+    Cuando accedo a la configuración de mi cuenta
+    Y selecciono la opción de eliminar permanentemente mi cuenta
+    Entonces se me muestra una confirmación para asegurarme de mi decisión
+    Y al confirmar, mi cuenta y todos mis datos asociados se eliminan de forma permanente de Akira
