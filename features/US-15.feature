@@ -1,23 +1,7 @@
-Feature: Cancelación de pedidos
+Feature: Visualización de información detallada de la cuenta
 
-  Scenario: Aparición del botón para cancelar el pedido
-    Given que el vendedor está en la ventana "Mis pedidos"
-    And el vendedor ha realizado una compra previamente en un plazo no mayor a 24 horas
-    When el vendedor de click en uno de los pedidos que haya realizado en un plazo no mayor a 24 horas
-    Then el sistema mostrará en una esquina de la información del pedido un botón para cancelar el pedido
-
-  Scenario: Confirmación de cancelación del pedido
-    Given que el vendedor está en la ventana "Información del pedido"
-    And el pedido correspondiente ha sido realizado en un plazo no mayor a 24 horas
-    When el vendedor de click en el botón cancelar pedido
-    Then el sistema mostrará un diálogo de confirmación de cancelación del pedido
-
-  Scenario: Cancelación del pedido
-    Given que el vendedor visualiza la ventana de confirmación de cancelación del pedido
-    When el vendedor dé click en el botón "confirmar cancelación"
-    Then el sistema mostrará un diálogo que indique que el pedido ha sido cancelado, y cancelará el pedido
-
-  Scenario: Cancelación de la cancelación del pedido
-    Given que el vendedor visualiza la ventana de confirmación de cancelación del pedido
-    When el vendedor dé click en el botón "atrás"
-    Then el sistema cerrará la ventana de confirmación de cancelación del pedido
+  Scenario: Visualizando información de la cuenta
+    Given que soy un usuario con sesión iniciada en la aplicación
+    Cuando navego hacia la sección de configuración de la cuenta o "Mi cuenta"
+    Entonces debería ver una página que muestre información detallada de mi cuenta, como nombre, dirección, información de contacto, etc.
+    Y la información debería ser precisa y reflejar los datos que he proporcionado durante la creación o actualización de mi cuenta
