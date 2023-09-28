@@ -1,6 +1,8 @@
-Feature: Gestión de cuenta de usuario
-Scenario: El usuario intenta acceder a los ajustes de su perfil para configurar su información
-Given que se haya registrado e ingresado a su cuenta correctamente
-And esté en la sección de "Ajuste de su perfil"
-When acceda a esa pestaña y modifique o agregue nueva información a su perfil
-Then se podrá guardar y establecer los datos registrados
+Feature: Sección de segmentos objetivos en la landing page
+
+  Scenario: Sección de segmentos objetivos en la landing page
+    Given que soy un usuario interesado en los productos de Lambders
+    Cuando visito la landing page de Lambders
+    Entonces espero encontrar una sección que presente de manera clara y concisa los segmentos objetivos de Lambders
+    Y veo los diferentes segmentos con los que Lambders busca enfocar sus productos
+    Y cada segmento objetivo está acompañado de una breve descripción que resalta los desafíos y necesidades específicas de ese segmento
