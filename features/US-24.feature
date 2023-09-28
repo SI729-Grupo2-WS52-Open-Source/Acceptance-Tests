@@ -1,7 +1,15 @@
-Feature: Cierre de sesión en la aplicación
+Feature: Modificar la cantidad de unidades en el carrito de compras
 
-  Scenario: Cierre de sesión
-    Given que el usuario ha iniciado sesión en la aplicación
-    And el comprador puede ver el menú de su perfil en la esquina superior derecha tras haberle dado clic
-    When el comprador presione el botón 'Cerrar Sesión'
-    Then el sistema cierra la sesión del usuario y muestra la página de inicio de sesión.
+  Scenario: Aumentar la cantidad de unidades del producto
+    Given que soy un usuario en la página de mi carrito de compras en Akira
+    Cuando encuentro un producto en el carrito
+    Y selecciono la opción de aumentar la cantidad de unidades del producto
+    Entonces la cantidad de unidades del producto se incrementa en uno
+    Y el total del carrito de compras se actualiza automáticamente
+
+  Scenario: Disminuir la cantidad de unidades del producto
+    Given que soy un usuario en la página de mi carrito de compras en Akira
+    Cuando encuentro un producto en el carrito
+    Y selecciono la opción de disminuir la cantidad de unidades del producto
+    Entonces la cantidad de unidades del producto se reduce en uno
+    Y el total del carrito de compras se actualiza automáticamente
