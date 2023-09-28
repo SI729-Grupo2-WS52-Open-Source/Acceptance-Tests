@@ -1,7 +1,8 @@
-Feature: Modo oscuro
+Feature: Creación de cuenta en Akira
 
-Scenario: Configurar el "modo oscuro"
-    Given que el usuario haya entrado en la página
-    And se encuentre en el apartado de Ajustes
-    When le haya dado al botón de "Modo Oscuro"
-    Then se activará o se desactivará el Modo Oscuro
+  Scenario: Creando una nueva cuenta
+    Given que soy un nuevo usuario en el sitio web de Akira
+    Cuando hago clic en el botón "Registrarse"
+    Entonces debería ser dirigido a la página de creación de cuenta
+    Y debería poder ingresar mis datos personales, como nombre, correo electrónico, contraseña
+    Y al enviar exitosamente, se debería crear mi cuenta
