@@ -1,7 +1,8 @@
-Feature: Seguimiento de envío de productos
+Feature: Cambiar contraseña de la cuenta
 
-  Scenario: Revisión del estado de los pedidos
-    Given que el vendedor está en la ventana de revisión de pedidos realizados
-    And el vendedor ha realizado una compra previamente
-    When el vendedor de click en uno de los pedidos que ha realizado
-    Then el sistema mostrará la información completa del pedido, y su estado actual, que puede ser aprobado, comprado, en espera de envío, en envío, en aduana y entregado
+  Scenario: Cambiando la contraseña de la cuenta
+    Given que soy un usuario con sesión iniciada en la aplicación
+    Cuando navego hacia la sección de configuración de la cuenta o "Mi cuenta"
+    Y selecciono la opción para cambiar mi contraseña
+    Entonces debería ver un formulario donde pueda ingresar mi contraseña actual y la nueva contraseña deseada
+    Y al guardar los cambios, mi contraseña debería actualizarse correctamente y ser válida para futuras sesiones de inicio de sesión
