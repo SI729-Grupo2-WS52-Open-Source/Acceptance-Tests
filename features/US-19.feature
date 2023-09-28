@@ -1,6 +1,8 @@
-Feature: Agregar productos al carrito
+Feature: Barra de búsqueda de productos
 
-  Scenario: Adición del producto al carrito
-    Given que el comprador está en la página de uno de los productos que le interesó
-    When el comprador de click en el botón “Agregar al carrito”
-    Then el sistema cambiará el texto del botón “Agregar al carrito” por “Agregado al carrito”, y luego de un segundo, por el número de productos que fueron agregados al carrito, acompañado de un botón para aumentar el número, y otro para reducirlo
+  Scenario: Buscar un producto por su nombre
+    Given que soy un usuario en la página principal de Akira
+    Cuando ingreso el nombre de un producto en la barra de búsqueda
+    Y presiono el botón de búsqueda
+    Entonces se muestran los resultados de búsqueda relacionados con el nombre del producto ingresado
+    Y puedo ver los productos que coinciden con el nombre buscado
