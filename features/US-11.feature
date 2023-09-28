@@ -1,5 +1,7 @@
-Feature: Carga rápida de la página
-  Scenario: Activo la versión liviana o solo HTML
-    Given que soy un usuario en un entorno con conexiones lentas
-    When acceda a la versión liviana o solo HTML de la página
-    Then debería recibir un mensaje claro que indique que se ha optado por la versión de carga rápida
+Feature: Inicio de sesión en la aplicación de Akira
+
+  Scenario: Iniciando sesión en la aplicación
+    Given que soy un usuario registrado de Akira
+    Cuando hago clic en el botón "Iniciar sesión" e ingreso mis datos
+    Entonces la aplicación debería validar mis datos y otorgarme acceso a mi cuenta
+    Y debería ser redirigido al panel de control de mi cuenta o a la página principal de Akira
