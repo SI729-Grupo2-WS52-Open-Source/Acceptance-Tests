@@ -1,13 +1,7 @@
-Feature: Historial de compras
+Feature: Acceso rápido a funciones importantes
 
-  Scenario: El usuario accede a su historial de compras, habiendo realizado compras anteriores
-    Given que esto en mi Perfil
-    And veo el apartado de “Historial”
-    When acceda mediante su respectivo botón
-    Then me mostrará un registro de cada compra que he realizado, mostrando la información básica
-
-  Scenario: El usuario accede a su historial de compras, sin haber tenido una compra realizada
-    Given que esto en mi Perfil
-    And veo el apartado de “Historial”
-    When acceda mediante su respectivo botón
-    Then se le mostrará un mensaje “No se encuentran compras registradas a su nombre”
+  Scenario: Accediendo a funciones importantes desde cualquier página
+    Given que soy un usuario con sesión iniciada en la aplicación
+    Cuando navego por cualquier página de la aplicación
+    Entonces debería tener acceso rápido a funciones importantes relacionadas con mi cuenta, como "Mi cuenta"
+    Y al hacer clic, debería ser redirigido a la página correspondiente sin problemas
