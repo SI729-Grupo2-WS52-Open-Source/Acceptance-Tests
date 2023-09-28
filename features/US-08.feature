@@ -1,18 +1,8 @@
-Feature: Opciones de envío
+Feature: Sección de contacto en la landing page de Akira
 
-Scenario: Visualización clara de costos
-Given que deseó un producto
-When lo encuentre
-And pueda visualizar su costo
-Then podré tomar una decisión
-
-Scenario: Selección de método de envío
-Given que escogí el producto
-When lo quiera ordenar
-And tenga distintas opciones de envío
-Then podré elegir la que se adecúa a mis necesidades
-
-Scenario: Compatibilidad con necesidades y preferencias del usuario
-Given que ya tengo el costo
-And el método de envío
-Then procedo a comprar el producto
+  Scenario: Sección de contacto en la landing page de Akira
+    Given que soy un usuario interesado en contactar con el equipo de Lambders
+    Cuando visito la landing page de Akira
+    Entonces espero encontrar una sección claramente visible titulada "Contacto"
+    Y veo la información de contacto, como la dirección de correo electrónico y el número de teléfono del equipo de Akira
+    Y encuentro enlaces o botones que me permitan acceder a las redes sociales de Akira para obtener más opciones de contacto
