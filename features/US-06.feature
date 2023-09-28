@@ -1,6 +1,8 @@
-Feature: Detalles de productos
-Scenario: El usuario opta en decidir comprar ese producto
-Given que se haya registrado e ingresado en la página
-And este en el catálogo de productos
-When busque el producto deseado y acceda a su descripción, fotos o videos referenciales
-Then el usuario podrá ver si ese producto es el adecuado o el que quería para hacer una buena compra
+Feature: Sección "Acerca de nosotros" en la landing page
+
+  Scenario: Sección "Acerca de nosotros" en la landing page
+    Given que soy un usuario interesado en el startup Lambders
+    Cuando visito la landing page de Lambders
+    Entonces espero encontrar una sección claramente visible titulada "Acerca de nosotros"
+    Y veo una descripción completa de Lambders
+    Y noto que se presentan los valores fundamentales de Akira, resaltando los principios éticos y la cultura empresarial
