@@ -1,8 +1,14 @@
-Feature: Visualización de información detallada de la cuenta
+Feature: Ver resumen de productos en el carrito antes de proceder al pago
 
-  Scenario: Acceso a “Mi cuenta”
-    Given que el comprador está en cualquier página de la aplicación
-    And el comprador ha iniciado sesión
-    And el comprador tenga desplegado el menú “Opciones de la cuenta”
-    When el comprador dé clic en el botón “Mi cuenta”
-    Then el sistema lo redirigirá a la página “Mi cuenta”
+  Scenario: Ver resumen de productos en el carrito
+    Given que soy un usuario en la página de mi carrito de compras en Akira
+    Cuando accedo a la página de resumen del carrito
+    Entonces se muestra un listado de todos los productos que he agregado al carrito
+    Y puedo ver detalles como el nombre del producto, la cantidad de unidades y el precio por unidad
+
+  Scenario: Calcular el total del carrito de compras
+    Given que soy un usuario en la página de mi carrito de compras en Akira
+    Cuando accedo a la página de resumen del carrito
+    Entonces se muestra el total a pagar por todos los productos en el carrito
+    Y en costo de envío
+    Y puedo ver el total que debo pagar antes de proceder al pago
