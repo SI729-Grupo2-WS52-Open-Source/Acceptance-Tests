@@ -1,6 +1,11 @@
-Feature: Recuperación de contraseña
+Feature: Seguimiento del envío de productos
 
-  Scenario: Redirección a la página de recuperación de contraseña
-    Given que el comprador accede a la página de inicio de sesión
-    When el usuario presione el botón '¿Olvidaste tu contraseña?'
-    Then el sistema redirecciona al usuario a la página de recuperación de la contraseña.
+  Scenario: Seguimiento del envío
+    Dado que soy un usuario que ha realizado un pedido en Akira
+    Cuando accedo a la sección de seguimiento de envío en mi cuenta
+    Entonces puedo ver el estado actual del envío de mis productos
+
+  Scenario: Notificaciones de actualización de envío
+    Dado que soy un usuario que ha realizado un pedido en Akira
+    Cuando se produce una actualización en el estado de envío de mis productos
+    Entonces recibo notificaciones o correos electrónicos informativos
